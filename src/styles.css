@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Dancing+Script&family=Mr+De+Haviland&family=Roboto:ital,wght@0,400;0,900;1,900&display=swap');
+
+:root {
+    --primary-color: #6B9AC4;
+    --secondary-color: #F4B942;
+    --tertiary-color: #6B9AC4;
+    --quaternary-color: #97D8C4;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+html {
+    font-family: sans-serif;
+}
