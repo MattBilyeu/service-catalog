@@ -1,1 +1,15 @@
-<p>service-item works!</p>
+<div class="container" *ngIf="entry">
+    <div class="hero">
+        <h1>{{ entry.title }}</h1>
+    </div>
+    <div class="inner-wrapper">
+        <div class="service-details">
+            <img [src]="entry.featuredImage" alt="Featured Image">
+            <div class="description" [innerHTML]="entry.description"></div>
+            <div class="details">
+                <h3 [innerHTML]="entry.price"></h3>
+                <p [innerHTML]="entry.priceDetail"></p>
+            </div>
+        </div>
+    </div>
+</div>

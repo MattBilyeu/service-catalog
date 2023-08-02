@@ -16,3 +16,12 @@ body {
 html {
     font-family: sans-serif;
 }
+
+.hero {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    padding: 3rem;
+    text-align: center;
+    font-family: 'Dancing Script', sans-serif;
+    color: white;
+    font-size: 3rem;
+}

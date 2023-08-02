@@ -1,0 +1,49 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    gap: 1rem;
+    margin: 1rem auto;
+}
+
+.package {
+    width: 350px;
+    background-color: var(--tertiary-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.package img {
+    width: 325px;
+    height: 250px;
+    align-self: center;
+}
+
+.cta {
+    align-self: center;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 black;
+}
+
+.cta:hover {
+    animation: 0.5s ctaHover ease-in-out forwards;
+}
+
+@keyframes ctaHover {
+    0% {
+
+    }
+    100% {
+        box-shadow: none;
+        background-color: black;
+        color: var(--quaternary-color);
+    }
+}
