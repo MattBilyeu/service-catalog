@@ -2,6 +2,12 @@
     margin: 0.2rem auto;
 }
 
+.packages-button-container {
+    display: flex;
+    margin: 2rem auto;
+    justify-content: center;
+}
+
 .packages-button {
     padding: 1rem;
     color: white;
@@ -54,7 +60,7 @@
     font-size: 2rem;
     margin-top: 0.2rem;
     margin-bottom: 0.2rem;
-    font-family: 'Dancing Script', sans-serif;
+    font-family: sans-serif;
 }
 
 .service-details h2 {
