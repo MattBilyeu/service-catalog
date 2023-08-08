@@ -76,13 +76,13 @@
                 <button class="packages-button" (click)="onPackages()">Packages</button>
             </div>
             <div class="services-container" *ngIf="entries">
-                <div class="service" *ngFor="let entry of entries; let i = index" (click)="onSelect(i)">
+                <div class="service" *ngFor="let entry of entries" (click)="onSelect(entry.sys.id)">
                     <div class="service-photo">
-                        <img [src]="entry.featuredImage" alt="Service Image">
+                        <img [src]="entry.fields.featuredImage.fields.file.url" alt="Service Image">
                     </div>
                     <div class="service-details">
-                        <h5 [innerHTML]="entry.title"></h5>
-                        <h2 [innerHTML]="entry.serviceBenefit"></h2>
+                        <h5 [innerHTML]="entry.fields.title"></h5>
+                        <h2 [innerHTML]="entry.fields.summary"></h2>
                     </div>
                 </div>
             </div>

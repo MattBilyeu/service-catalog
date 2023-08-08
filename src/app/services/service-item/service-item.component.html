@@ -69,17 +69,17 @@
                 <div class="top_panel_image_hover"></div>
                 <div class="top_panel_image_header">
                     <div class="top_panel_image_icon icon-book-open"></div>
-                    <h1 class="top_panel_image_title" *ngIf="entry">{{ entry.title }}</h1>
+                    <h1 class="top_panel_image_title" *ngIf="entry">{{ entry.fields.title }}</h1>
                 </div>
             </section>
     <div class="container" *ngIf="entry">
         <div class="inner-wrapper">
             <div class="service-details">
-                <img [src]="entry.featuredImage" alt="Featured Image">
-                <div class="description" [innerHTML]="entry.description"></div>
+                <img [src]="entry.fields.featuredImage.fields.file.url" alt="Featured Image">
+                <div class="description" [innerHTML]="entry.fields.description | toHtml"></div>
                 <div class="details">
-                    <h3 [innerHTML]="entry.price"></h3>
-                    <p [innerHTML]="entry.priceDetail"></p>
+                    <h3>$<span [innerHTML]="entry.fields.price"></span></h3>
+                    <p [innerHTML]="entry.fields.duration"></p>
                 </div>
             </div>
         </div>

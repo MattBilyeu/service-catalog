@@ -47,6 +47,8 @@
 
 .service-photo {
     margin: auto;
+    border: thin white solid;
+    box-shadow: 2px 2px 2px black;
 }
 
 .service-photo img {

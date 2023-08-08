@@ -12,7 +12,11 @@ export class PackagesComponent implements OnInit {
   constructor(private contentful: ContentfulService) {}
 
   ngOnInit() {
-    this.packages = this.contentful.packages;
+    this.contentful.getPackages().then(
+      packages => {
+        this.packages = packages
+      }
+    );
   }
 
 }

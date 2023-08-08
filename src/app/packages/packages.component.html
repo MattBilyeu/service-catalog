@@ -74,10 +74,10 @@
             </section>
             <div class="wrapper" *ngIf="packages">
                 <div class="package" *ngFor="let package of packages">
-                    <img [src]="package.packageImage" alt="Package Image">
-                    <h3 [innerHTML]="package.packageTitle"></h3>
-                    <div [innerHTML]="package.packageDetails"></div>
-                    <p [innerHTML]="package.packagePrice"></p>
+                    <img [src]="package.fields.packageImage.fields.file.url" alt="Package Image">
+                    <h3 [innerHTML]="package.fields.packageTitle"></h3>
+                    <div [innerHTML]="package.fields.packageDetails | toHtml"></div>
+                    <p>$<span [innerHTML]="package.fields.packagePrice"></span></p>
                     <a class="cta">Book Now</a>
                 </div>
             </div>

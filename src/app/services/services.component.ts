@@ -14,7 +14,12 @@ export class ServicesComponent implements OnInit {
               private contentful: ContentfulService) {}
 
   ngOnInit() {
-    this.entries = this.contentful.entries;
+    this.contentful.getServices().then(
+      entries => {
+        this.entries = entries;
+        console.log(this.entries)
+      }
+    );
   }
 
   onPackages() {

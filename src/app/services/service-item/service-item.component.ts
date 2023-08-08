@@ -10,6 +10,7 @@ import { ContentfulService } from 'src/app/shared/contentful.service';
 })
 export class ServiceItemComponent implements OnInit {
   entry: any;
+  entryid: string = '';
 
   constructor(private contentful: ContentfulService,
               private router: Router,
@@ -18,7 +19,16 @@ export class ServiceItemComponent implements OnInit {
   ngOnInit() {
     const params = this.route.params.subscribe(
       (params: Params) => {
-        this.entry = this.contentful.entries[params['id']]
+        this.entryid = params['id']
+      }
+    );
+    this.contentful.getServices().then(
+      entries => {
+        entries.forEach(entry => {
+          if(entry.sys.id === this.entryid) {
+            this.entry = entry
+          }
+        })
       }
     )
   }
